@@ -17,7 +17,6 @@
         }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/animejs/dist/bundles/anime.umd.min.js"></script>
-    <script src="./pwa.js"></script>
     <link rel="stylesheet" href="./style.css?v=8">
 </head>
 
@@ -318,6 +317,12 @@
          SCRIPTS
     ═══════════════════════════════════════════════════════════ -->
     <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js', { scope: './' }).catch(() => {});
+            }, { once: true });
+        }
+
         // Theme init
         document.documentElement.classList.add('dark');
         if (localStorage.getItem('theme') === 'light') {
