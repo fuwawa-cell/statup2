@@ -1,0 +1,25 @@
+{
+  "name": "Rikkieffect Stay Awake",
+  "short_name": "Stay Awake",
+  "description": "A focused personal startup page for Rikki.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#101609",
+  "theme_color": "#769826",
+  "icons": [
+    {
+      "src": "./icon.gif",
+      "sizes": "any",
+      "type": "image/gif",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon2.gif",
+      "sizes": "any",
+      "type": "image/gif",
+      "purpose": "maskable"
+    }
+  ]
+}
